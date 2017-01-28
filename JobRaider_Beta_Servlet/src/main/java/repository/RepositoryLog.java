@@ -57,7 +57,7 @@ public class RepositoryLog  extends Close{
 	        se.printStackTrace();
 		} finally {
 			close(resultSet);
-		    close(prepareStatement); 
+			close(prepareStatement); 
 		} 
 		
 		manager.close(connection);
