@@ -33,7 +33,7 @@ public class RepositoryUser extends Close{
 		manager.close(connection);
 	}
 
-	public static boolean validateUser(String name, String pass) {
+	public boolean validateUser(String name, String pass) {
 		boolean status = false;
 		Connection connection = manager.open(jdbcUrl);;
 		PreparedStatement ps = null;
