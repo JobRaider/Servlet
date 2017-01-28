@@ -18,13 +18,12 @@ public class RepositoryUser extends Close{
 		PreparedStatement ps = null;
 		
 		try{
-	    	ps = connection.prepareStatement("INSERT INTO user (nombre, password, dni) VALUES( ?, ?, ? )");
-	    	ps.setString(1, name);
-	    	ps.setString(2, password);
-	    	ps.setString(3, dni);
-	    	ps.executeUpdate();
-	    	
-    	}catch (SQLException e) {
+			ps = connection.prepareStatement("INSERT INTO user (nombre, password, dni) VALUES( ?, ?, ? )");
+			ps.setString(1, name);
+			ps.setString(2, password);
+			ps.setString(3, dni);
+			ps.executeUpdate();
+		}catch (SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}finally {

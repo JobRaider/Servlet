@@ -20,11 +20,11 @@ public class RepositoryLog  extends Close{
 		PreparedStatement ps = null;
 		
 		try{
-	    	ps = connection.prepareStatement("INSERT INTO log (nombre, fecha, hora, estado) VALUES( ?,  NOW() ,CURTIME()  , ?)");
-	    	ps.setString(1, name);
-	    	ps.setString(2, state);
-	    	ps.executeUpdate();
-    	}catch (SQLException e) {
+			ps = connection.prepareStatement("INSERT INTO log (nombre, fecha, hora, estado) VALUES( ?,  NOW() ,CURTIME()  , ?)");
+			ps.setString(1, name);
+			ps.setString(2, state);
+			ps.executeUpdate();
+		}catch (SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}finally {
@@ -55,12 +55,10 @@ public class RepositoryLog  extends Close{
 			}	
 		} catch (SQLException se) {
 	        se.printStackTrace();
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    } finally {
-	    	close(resultSet);
-	        close(prepareStatement); 
-	    } 
+		} finally {
+			close(resultSet);
+		    close(prepareStatement); 
+		} 
 		
 		manager.close(connection);
 	    return listLog;
