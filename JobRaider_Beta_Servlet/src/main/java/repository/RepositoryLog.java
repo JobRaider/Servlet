@@ -56,7 +56,7 @@ public class RepositoryLog  extends Close{
 		} catch (SQLException se) {
 	        se.printStackTrace();
 		} finally {
-			close(rs);
+			close(resultSet);
 		    close(prepareStatement); 
 		} 
 		
