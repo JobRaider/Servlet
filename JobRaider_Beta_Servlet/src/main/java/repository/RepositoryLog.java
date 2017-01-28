@@ -61,6 +61,6 @@ public class RepositoryLog  extends Close{
 		} 
 		
 		manager.close(connection);
-	    return listLog;
+		return listLog;
 	}
 }
