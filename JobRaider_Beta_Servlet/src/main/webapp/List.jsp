@@ -24,17 +24,17 @@
 					<tr>
 						<td>Nombre</td>
 						<td>Estado</td>
-						<td align = "center">Dia</td>
+						<td>Dia</td>
 						<td>Hora</td>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="country" items="${listAllLog}">
+					<c:forEach var="log" items="${listAllLog}">
 						<tr>
-							<td><c:out value="${country.name}"/> </td>
-							<td><c:out value="${country.state}"/> </td>
-							<td><c:out value="${country.date}"/> </td>
-							<td><c:out value="${country.hour}"/> </td>
+							<td><c:out value="${log.name}"/> </td>
+							<td><c:out value="${log.state}"/> </td>
+							<td><c:out value="${log.date}"/> </td>
+							<td><c:out value="${log.hour}"/> </td>
 						</tr>
 					</c:forEach>
 				</tbody>
