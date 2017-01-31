@@ -42,18 +42,18 @@
 					</tr>
 				</thead>
 				<tbody>
-						<%  
-							Service service = new Service();
-							List<Log> listAllLogs = service.listAllLogs(); 
-							for (Log log: listAllLogs){
-								out.println("<tr>");
-									out.println("<td>"+ log.getName() +"</td>");
-									out.println("<td>"+ log.getState() +"</td>");
-									out.println("<td>"+ log.getDate() +"</td>");
-									out.println("<td>"+ log.getHour() +"</td>");
-								out.println("</tr>");
-							}
-						%>
+					<%  
+						Service service = new Service();
+						List<Log> listAllLogs = service.listAllLogs(); 
+						for (Log log: listAllLogs){
+							out.println("<tr>");
+								out.println("<td>"+ log.getName() +"</td>");
+								out.println("<td>"+ log.getState() +"</td>");
+								out.println("<td>"+ log.getDate() +"</td>");
+								out.println("<td>"+ log.getHour() +"</td>");
+							out.println("</tr>");
+						}
+					%>
 				</tbody>
 		</table>
 	</body>
