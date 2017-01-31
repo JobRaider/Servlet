@@ -29,24 +29,24 @@
 		<br>
 		<br>
 		<table>
-				<thead>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Estado</th>
+					<th>Dia</th>
+					<th>Hora</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="log" items="${listAllLogByName}">
 					<tr>
-						<th>Nombre</th>
-						<th>Estado</th>
-						<th>Dia</th>
-						<th>Hora</th>
+						<td><c:out value="${log.name}"/> </td>
+						<td><c:out value="${log.state}"/> </td>
+						<td><c:out value="${log.date}"/> </td>
+						<td><c:out value="${log.hour}"/> </td>
 					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="log" items="${listAllLogByName}">
-						<tr>
-							<td><c:out value="${log.name}"/> </td>
-							<td><c:out value="${log.state}"/> </td>
-							<td><c:out value="${log.date}"/> </td>
-							<td><c:out value="${log.hour}"/> </td>
-						</tr>
-					</c:forEach>
-				</tbody>
+				</c:forEach>
+			</tbody>
 		</table>
 	</body>
 </html>

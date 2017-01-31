@@ -32,28 +32,28 @@
 		<br>
 		<br>
 		<table>
-				<thead>
-					<tr>
-						<th>Nombre</th>
-						<th>Estado</th>
-						<th>Dia</th>
-						<th>Hora</th>
-					</tr>
-				</thead>
-				<tbody>
-					<%  
-						Service service = new Service();
-						List<Log> listAllLogs = service.listAllLogs(); 
-						for (Log log: listAllLogs){
-							out.println("<tr>");
-								out.println("<td><a href='select?name="+log.getName()+"'>"+ log.getName() +"</a></td>");
-								out.println("<td>"+ log.getState() +"</td>");
-								out.println("<td>"+ log.getDate() +"</td>");
-								out.println("<td>"+ log.getHour() +"</td>");
-							out.println("</tr>");
-						}
-					%>
-				</tbody>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Estado</th>
+					<th>Dia</th>
+					<th>Hora</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%  
+					Service service = new Service();
+					List<Log> listAllLogs = service.listAllLogs(); 
+					for (Log log: listAllLogs){
+						out.println("<tr>");
+							out.println("<td><a href='select?name="+log.getName()+"'>"+ log.getName() +"</a></td>");
+							out.println("<td>"+ log.getState() +"</td>");
+							out.println("<td>"+ log.getDate() +"</td>");
+							out.println("<td>"+ log.getHour() +"</td>");
+						out.println("</tr>");
+					}
+				%>
+			</tbody>
 		</table>
 	</body>
 </html>
