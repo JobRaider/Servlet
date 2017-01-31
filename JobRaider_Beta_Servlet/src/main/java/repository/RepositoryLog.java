@@ -63,4 +63,35 @@ public class RepositoryLog  extends Close{
 		manager.close(connection);
 		return listLog;
 	}
+	
+	public List<Log> listAllLogsByName(String name){
+		Connection connection =  manager.open(jdbcUrl);;
+		List<Log> listLog= new ArrayList<Log>();
+		ResultSet resultSet = null;
+		PreparedStatement prepareStatement = null;
+		
+		try {
+			prepareStatement = connection.prepareStatement("SELECT * FROM log WHERE nombre = ? ");
+			prepareStatement.setString(1, name);
+			resultSet = prepareStatement.executeQuery();
+			while(resultSet.next()){
+				Log userInDatabase = new Log();
+				
+				userInDatabase.setName(resultSet.getString(1));
+				userInDatabase.setDate(resultSet.getDate(2));
+				userInDatabase.setHour(resultSet.getTime(3));
+				userInDatabase.setState(resultSet.getString(4));
+				
+				listLog.add(userInDatabase);
+			}	
+		} catch (SQLException se) {
+	        se.printStackTrace();
+		} finally {
+			close(resultSet);
+			close(prepareStatement); 
+		} 
+		
+		manager.close(connection);
+		return listLog;
+	}
 }

@@ -15,17 +15,18 @@ import service.Service;
 
 public class ListServlet extends HttpServlet {
 	private Service service = new Service();
-	List<Log> listAllLog = new ArrayList<Log>();
+	List<Log> listAllLogByName = new ArrayList<Log>();
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllLog = service.listAllLogs();
-		req.setAttribute("listAllLog", listAllLog);
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String name = req.getParameter("name");
+		listAllLogByName = service.listAllLogsByName(name);
+		req.setAttribute("listAllLogByName", listAllLogByName);
 		redirect(req,resp);
 	}
 	
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/List.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ListByName.jsp");
 		dispatcher.forward(req,resp);
 	}
 }

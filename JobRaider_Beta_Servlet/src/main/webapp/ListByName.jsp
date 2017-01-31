@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="java.io.*,java.util.*,model.*,service.*" %>
+<%@ page import="java.io.*,java.util.*,servlet.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
- 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Listar</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Usuario</title>
 		<style>
 			body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -23,12 +22,10 @@
 			    color: #669;    border-top: 1px solid transparent; }
 			
 			tr:hover td { background: #d0dafd; color: #339; }
-			
-			a { text-decoration:none; color: #669;}
 		</style>
 	</head>
 	<body>
-		<input type="button" onclick="window.location.href='index.jsp'"  value="Volver">	
+		<input type="button" onclick="window.location.href='List.jsp'"  value="Volver">	
 		<br>
 		<br>
 		<table>
@@ -41,18 +38,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<%  
-						Service service = new Service();
-						List<Log> listAllLogs = service.listAllLogs(); 
-						for (Log log: listAllLogs){
-							out.println("<tr>");
-								out.println("<td><a href='select?name="+log.getName()+"'>"+ log.getName() +"</a></td>");
-								out.println("<td>"+ log.getState() +"</td>");
-								out.println("<td>"+ log.getDate() +"</td>");
-								out.println("<td>"+ log.getHour() +"</td>");
-							out.println("</tr>");
-						}
-					%>
+					<c:forEach var="log" items="${listAllLogByName}">
+						<tr>
+							<td><c:out value="${log.name}"/> </td>
+							<td><c:out value="${log.state}"/> </td>
+							<td><c:out value="${log.date}"/> </td>
+							<td><c:out value="${log.hour}"/> </td>
+						</tr>
+					</c:forEach>
 				</tbody>
 		</table>
 	</body>

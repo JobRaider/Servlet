@@ -24,5 +24,9 @@ public class Service {
 	public List<Log> listAllLogs() {
 		return repositoryLog.listAllLogs();
 	}
+	
+	public List<Log> listAllLogsByName(String name) {
+		return repositoryLog.listAllLogsByName(name);
+	}
 
 }
