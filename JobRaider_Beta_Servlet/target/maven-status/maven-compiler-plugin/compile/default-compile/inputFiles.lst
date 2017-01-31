@@ -1,7 +1,8 @@
+D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\servlet\ListStateServlet.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\service\Service.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\servlet\httpPostServlet.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\conection\ConnectionMysql.java
-D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\servlet\ListServlet.java
+D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\servlet\ListNameServlet.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\conection\ConnectionManager.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\repository\RepositoryUser.java
 D:\Servlet\Jobraider\JobRaider_Beta_Servlet\src\main\java\repository\Close.java

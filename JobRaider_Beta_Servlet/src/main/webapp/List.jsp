@@ -46,8 +46,8 @@
 					List<Log> listAllLogs = service.listAllLogs(); 
 					for (Log log: listAllLogs){
 						out.println("<tr>");
-							out.println("<td><a href='select?name="+log.getName()+"'>"+ log.getName() +"</a></td>");
-							out.println("<td>"+ log.getState() +"</td>");
+							out.println("<td><a href='listName?name="+log.getName()+"'>"+ log.getName() +"</a></td>");
+							out.println("<td><a href='listState?state="+log.getState()+"'>"+ log.getState() +"</a></td>");
 							out.println("<td>"+ log.getDate() +"</td>");
 							out.println("<td>"+ log.getHour() +"</td>");
 						out.println("</tr>");

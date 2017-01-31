@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<h3>Login</h3>
-		<form action="Login">
+		<form action="login">
 			<table width="40%">
 				<tr>
 					<td>
@@ -89,24 +89,6 @@
 				<tr>
 					<td colspan="2" align="center">
 						<input type="submit"value="Insertar Log" />
-					</td>
-				</tr>
-			</table>
-		</form>
-		
-		<h3>Consulta</h3>
-		<form action="select">
-			<table width="40%">
-				<tr>
-					<td>
-						<p>Nombre:</p>
-					</td>
-					<td>
-						<input type="text" name="name" />
-					</td>
-				</tr>
-					<td colspan="2" align="center">
-						<input type="submit" value="Select Log" />
 					</td>
 				</tr>
 			</table>

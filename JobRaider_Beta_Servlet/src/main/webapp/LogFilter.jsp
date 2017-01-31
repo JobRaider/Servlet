@@ -38,7 +38,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="log" items="${listAllLogByName}">
+				<c:forEach var="log" items="${filterList}">
 					<tr>
 						<td><c:out value="${log.name}"/> </td>
 						<td><c:out value="${log.state}"/> </td>

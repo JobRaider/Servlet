@@ -28,5 +28,8 @@ public class Service {
 	public List<Log> listAllLogsByName(String name) {
 		return repositoryLog.listAllLogsByName(name);
 	}
-
+	
+	public List<Log> listAllLogsByState(String state) {
+		return repositoryLog.listAllLogsByState(state);
+	}
 }

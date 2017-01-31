@@ -25,17 +25,27 @@
 	</servlet>
 	<servlet-mapping>
 	<servlet-name>Login</servlet-name>
-	<url-pattern>/Login</url-pattern>
+	<url-pattern>/login</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-	   <servlet-name>select</servlet-name>
-	   <servlet-class>servlet.ListServlet</servlet-class>
+	   <servlet-name>ListNameServlet</servlet-name>
+	   <servlet-class>servlet.ListNameServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-	   <servlet-name>select</servlet-name>
-	   <url-pattern>/select</url-pattern>
+	   <servlet-name>ListNameServlet</servlet-name>
+	   <url-pattern>/listName</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	   <servlet-name>ListStateServlet</servlet-name>
+	   <servlet-class>servlet.ListStateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>ListStateServlet</servlet-name>
+	   <url-pattern>/listState</url-pattern>
+	</servlet-mapping>
+	 
 	 
 	<welcome-file-list>
 	  <welcome-file>index.jsp</welcome-file>
