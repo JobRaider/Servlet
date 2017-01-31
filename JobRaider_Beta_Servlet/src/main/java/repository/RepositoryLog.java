@@ -47,8 +47,8 @@ public class RepositoryLog  extends Close{
 				Log userInDatabase = new Log();
 				
 				userInDatabase.setName(resultSet.getString(1));
-				userInDatabase.setHour(resultSet.getDate(2));
-				userInDatabase.setDate(resultSet.getDate(3));
+				userInDatabase.setDate(resultSet.getDate(2));
+				userInDatabase.setHour(resultSet.getTime(3));
 				userInDatabase.setState(resultSet.getString(4));
 				
 				listLog.add(userInDatabase);

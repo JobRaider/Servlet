@@ -1,11 +1,12 @@
 package model;
 
 import java.sql.Date;
+import java.sql.Time;
 
 public class Log {
 	private String Name;
 	private Date Date;
-	private Date Hour;
+	private Time Hour;
 	private String State;
 	
 	public String getName() {
@@ -24,11 +25,11 @@ public class Log {
 		Date = date;
 	}
 	
-	public Date getHour() {
+	public Time getHour() {
 		return Hour;
 	}
 	
-	public void setHour(Date hour) {
+	public void setHour(Time hour) {
 		Hour = hour;
 	}
 	

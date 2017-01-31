@@ -22,10 +22,8 @@ public class ListServlet extends HttpServlet {
 		listAllLog = service.listAllLogs();
 		req.setAttribute("listAllLog", listAllLog);
 		redirect(req,resp);
-
 	}
 	
-
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/List.jsp");
 		dispatcher.forward(req,resp);
